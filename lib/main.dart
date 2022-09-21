@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -172,8 +173,51 @@ class MyApp extends StatelessWidget {
               )
             ]),
           ),
+           Container(
+            alignment: Alignment.center,
+            margin: const EdgeInsets.all(10),
+            child: Column(children: [
+              Container(
+                decoration:
+                    BoxDecoration(border: Border.all(color: Colors.grey)),
+                child: Row(
+                  children: [
+                    const Image(
+                      image: NetworkImage(
+                          'https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt4e7969bade7a9838/60dae7ca2e95e10f21ee4d4d/90fc0bacd0091994ffd8736162d591e806c6658a.jpg?quality=80&format=pjpg&auto=webp&width=620'),
+                      height: 100,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(10),
+                      alignment: Alignment.center,
+                      margin: const EdgeInsets.all(10),
+                      child: const Text(
+                          "Pique Bilang Wasit Untungkan Madrid, Koeman Tepok Jidat ",
+                          style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold)),
+                      width: 250,
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                decoration:
+                    BoxDecoration(border: Border.all(color: Colors.grey)),
+                padding: const EdgeInsets.all(10),
+                alignment: Alignment.centerLeft,
+                child: const Text('Barcelona Feb 13, 2021',
+                    style: TextStyle(
+                        fontSize: 15,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold)),
+                height: 40,
+              )
+            ]),
+          ),
         ],
       ),
-    ));
+    )));
   }
 } 
